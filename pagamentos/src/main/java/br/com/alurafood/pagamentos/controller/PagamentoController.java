@@ -26,7 +26,7 @@ public class PagamentoController {
         return service.obterTodos(paginacao);
     }
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public ResponseEntity<PagamentoDto> detalhar(@PathVariable @NotNull Long id){
         PagamentoDto dto = service.obterPorId(id);
         return ResponseEntity.ok(dto);
